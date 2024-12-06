@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Íslenskur Innkaupalisti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Íslenskur Innkaupalisti</h1>
+        <p>Skráðu innkaupalistann þinn og fáðu áminningar fyrir verslanir!</p>
+    </header>
+
+    <main>
+        <section id="shopping-list">
+            <h2>Innkaupalisti</h2>
+            <div id="list-container">
+                <input type="text" id="item-input" placeholder="Bæta við vöru...">
+                <button id="add-button">Bæta við</button>
+                <ul id="items-list"></ul>
+            </div>
+        </section>
+
+        <section id="reminders">
+            <h2>Áminningar fyrir verslanir</h2>
+            <div id="supermarkets">
+                <button class="supermarket" onclick="setReminder('Krónan', '09:00 - 20:00')">Krónan</button>
+                <button class="supermarket" onclick="setReminder('Bónus', '10:00 - 19:00')">Bónus</button>
+                <button class="supermarket" onclick="setReminder('Netto', '08:00 - 23:00')">Netto</button>
+                <button class="supermarket" onclick="setReminder('Krambúð', '24/7')">Krambúð</button>
+            </div>
+            <p id="reminder-message"></p>
+        </section>
+
+        <button id="enable-notifications">Virkja Tilkynningar</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Íslenskur Innkaupalisti</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
