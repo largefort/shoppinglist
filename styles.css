@@ -60,10 +60,18 @@ main {
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #add-button:hover {
     background: #1565c0; /* Slightly lighter blue for hover effect */
+    transform: scale(1.03);
+}
+
+#add-button:active {
+    background: #0b3c91; /* Darker shade for active state */
+    transform: scale(0.98);
 }
 
 ul#items-list {
@@ -91,10 +99,17 @@ ul#items-list li button {
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 ul#items-list li button:hover {
     background: #b71c1c; /* Darker red for hover effect */
+    transform: scale(1.03);
+}
+
+ul#items-list li button:active {
+    background: #9a0007; /* Even darker red for active state */
+    transform: scale(0.98);
 }
 
 #supermarkets {
@@ -114,10 +129,17 @@ ul#items-list li button:hover {
     flex: 1 1 calc(45% - 10px); /* Flexible grid for buttons */
     text-align: center;
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .supermarket:hover {
     background: #1565c0; /* Lighter blue for hover */
+    transform: scale(1.03);
+}
+
+.supermarket:active {
+    background: #0b3c91; /* Darker shade for active state */
+    transform: scale(0.98);
 }
 
 #reminder-message {
@@ -126,6 +148,30 @@ ul#items-list li button:hover {
     text-align: center;
     font-size: 0.9em;
     color: #616161; /* Subtle gray text */
+}
+
+#enable-notifications {
+    width: 100%;
+    padding: 12px;
+    background: #0d47a1; /* Deep blue, matching the app's palette */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+#enable-notifications:hover {
+    background: #1565c0; /* Slightly lighter blue for hover effect */
+    transform: scale(1.03); /* Subtle scaling for interaction feedback */
+}
+
+#enable-notifications:active {
+    background: #0b3c91; /* Darker shade for active state */
+    transform: scale(0.98); /* Slight press effect */
 }
 
 footer {
@@ -138,6 +184,10 @@ footer {
 
 /* Mobile-Specific Styles */
 @media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
     header {
         padding: 15px 10px;
     }
@@ -190,17 +240,6 @@ footer {
 
     #enable-notifications {
         width: 100%;
-        padding: 10px;
-        background: #0d47a1;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        margin-top: 15px;
-        cursor: pointer;
-    }
-
-    #enable-notifications:hover {
-        background: #1565c0;
     }
 }
+
