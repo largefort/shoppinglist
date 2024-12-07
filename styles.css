@@ -3,12 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f0f0;
-    color: #333;
+    background: #f5f5f5; /* Light background matching the app's clean look */
+    color: #212121; /* Darker text for readability */
 }
 
 header {
-    background: #007bff;
+    background: #0d47a1; /* Deep blue for header background */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -46,23 +46,24 @@ main {
 
 #item-input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #90caf9; /* Light blue border */
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 #add-button {
-    padding: 10px 15px;
-    background: #007bff;
+    padding: 12px 20px;
+    background: #0d47a1; /* App’s deep blue */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    flex-shrink: 0;
+    font-size: 16px;
 }
 
 #add-button:hover {
-    background: #0056b3;
+    background: #1565c0; /* Slightly lighter blue for hover effect */
 }
 
 ul#items-list {
@@ -72,48 +73,51 @@ ul#items-list {
 }
 
 ul#items-list li {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
+    padding: 12px;
+    border: 1px solid #cfd8dc; /* Light gray border */
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 8px;
+    background: #e3f2fd; /* Light blue background */
 }
 
 ul#items-list li button {
-    padding: 5px 10px;
-    background: #ff4d4d;
+    padding: 8px 12px;
+    background: #d32f2f; /* App’s red for delete button */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 ul#items-list li button:hover {
-    background: #cc0000;
+    background: #b71c1c; /* Darker red for hover effect */
 }
 
 #supermarkets {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .supermarket {
-    padding: 10px 20px;
-    background: #007bff;
+    padding: 12px 20px;
+    background: #0d47a1; /* App’s deep blue */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     flex: 1 1 calc(45% - 10px); /* Flexible grid for buttons */
     text-align: center;
+    font-size: 16px;
 }
 
 .supermarket:hover {
-    background: #0056b3;
+    background: #1565c0; /* Lighter blue for hover */
 }
 
 #reminder-message {
@@ -121,22 +125,19 @@ ul#items-list li button:hover {
     font-style: italic;
     text-align: center;
     font-size: 0.9em;
-    color: #555;
+    color: #616161; /* Subtle gray text */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background: #007bff;
+    padding: 15px;
+    background: #0d47a1; /* Deep blue footer */
     color: white;
+    font-size: 14px;
 }
 
 /* Mobile-Specific Styles */
 @media (max-width: 600px) {
-    body {
-        padding: 0;
-    }
-
     header {
         padding: 15px 10px;
     }
@@ -180,7 +181,7 @@ footer {
     }
 
     #supermarkets {
-        gap: 5px;
+        gap: 10px;
     }
 
     .supermarket {
@@ -190,16 +191,16 @@ footer {
     #enable-notifications {
         width: 100%;
         padding: 10px;
-        background: #007bff;
+        background: #0d47a1;
         color: white;
         border: none;
-        border-radius: 4px;
-        font-size: 1em;
+        border-radius: 8px;
+        font-size: 16px;
         margin-top: 15px;
         cursor: pointer;
     }
 
     #enable-notifications:hover {
-        background: #0056b3;
+        background: #1565c0;
     }
 }
