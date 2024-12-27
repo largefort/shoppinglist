@@ -3,7 +3,7 @@ document.getElementById("enable-notifications").addEventListener("click", enable
 
 let notificationPermission = false;
 
-// Function to add items to the shopping list
+// Add items to the shopping list
 function addItem() {
     const itemInput = document.getElementById("item-input");
     const itemsList = document.getElementById("items-list");
@@ -14,16 +14,19 @@ function addItem() {
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Eyða";
+        deleteButton.classList.add("delete-button"); // Ensure styling
         deleteButton.addEventListener("click", () => li.remove());
 
         li.appendChild(deleteButton);
         itemsList.appendChild(li);
 
-        itemInput.value = "";
+        itemInput.value = ""; // Clear input after adding
+    } else {
+        alert("Vinsamlegast sláðu inn vöru.");
     }
 }
 
-// Function to set reminders for specific stores
+// Set reminders for specific stores
 function setReminder(store, hours) {
     const message = document.getElementById("reminder-message");
     message.textContent = `Mundu að fara í ${store} næst! Opið frá ${hours}.`;
@@ -52,7 +55,7 @@ function enableNotifications() {
     }
 }
 
-// Schedule a notification for the store
+// Schedule a notification
 function scheduleNotification(store, hours) {
     const items = Array.from(document.querySelectorAll("#items-list li")).map(
         (li) => li.textContent.replace("Eyða", "").trim()
@@ -62,11 +65,11 @@ function scheduleNotification(store, hours) {
 
     new Notification(`Innkaupalisti áminning`, {
         body: `Fara í ${store} áður en það lokar (${hours}). ${itemList}`,
-        icon: "https://via.placeholder.com/128" // Replace with an actual icon URL
+        icon: "https://via.placeholder.com/128" // Replace with actual icon URL
     });
 }
 
-// Background notification example (triggered after 5 minutes)
+// Background notification example (triggered every 5 minutes)
 setInterval(() => {
     if (notificationPermission) {
         const items = Array.from(document.querySelectorAll("#items-list li")).map(
@@ -76,8 +79,9 @@ setInterval(() => {
         if (items.length > 0) {
             new Notification("Tími til að versla!", {
                 body: `Þú hefur eftirfarandi vörur á listanum: ${items.join(", ")}.`,
-                icon: "https://via.placeholder.com/128" // Replace with an actual icon URL
+                icon: "https://via.placeholder.com/128" // Replace with actual icon URL
             });
         }
     }
-}, 300000); // 300,000ms = 5 minutes
+}, 300000); // 5 minutes
+
