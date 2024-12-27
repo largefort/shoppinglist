@@ -73,7 +73,6 @@ main {
     transform: scale(0.98);
 }
 
-/* Shopping List Styles */
 ul#items-list {
     list-style: none;
     padding: 0;
@@ -82,19 +81,18 @@ ul#items-list {
 
 ul#items-list li {
     padding: 12px;
-    border: 1px solid #CFD8DC; /* Light gray border */
+    border: 1px solid #cfd8dc;
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    background: linear-gradient(90deg, #E3F2FD, #BBDEFB); /* Light blue gradient for list items */
-    color: #212121; /* Dark text */
+    background: #e3f2fd; /* Light blue background */
 }
 
 ul#items-list li button {
     padding: 8px 12px;
-    background: linear-gradient(90deg, #D32F2F, #B71C1C); /* Gradient for delete button */
+    background: #d32f2f;
     color: white;
     border: none;
     border-radius: 8px;
@@ -104,12 +102,12 @@ ul#items-list li button {
 }
 
 ul#items-list li button:hover {
-    background: linear-gradient(90deg, #B71C1C, #9A0007); /* Hover gradient */
+    background: #b71c1c;
     transform: scale(1.03);
 }
 
 ul#items-list li button:active {
-    background: linear-gradient(90deg, #9A0007, #D32F2F); /* Active gradient */
+    background: #9a0007;
     transform: scale(0.98);
 }
 
